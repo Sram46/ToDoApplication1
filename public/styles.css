@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+button {
+    margin-left: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+    display: block;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    color: red;
+}
