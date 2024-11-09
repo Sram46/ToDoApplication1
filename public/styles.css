@@ -1,41 +1,132 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
+    background-color: #e0e5ec;
+    color: #333;
 }
 
 h1 {
     text-align: center;
+    color: #4a4a4a;
 }
 
 form {
     margin-bottom: 20px;
+    background-color: #e0e5ec;
+    border-radius: 12px;
+    box-shadow: 9px 9px 16px #a3b1c6, -9px -9px 16px #ffffff;
+    padding: 15px;
+    transition: transform 0.3s;
 }
 
+form:hover {
+    transform: scale(1.02);
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    background-color: #e0e5ec;
+    box-shadow: inset 5px 5px 10px #c0c4c9, inset -5px -5px 10px #ffffff;
+    font-size: 16px;
+    color: #333;
+    transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    box-shadow: inset 3px 3px 8px #c0c4c9, inset -3px -3px 8px #ffffff;
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 12px;
+    background-color: #e0e5ec;
+    box-shadow: 6px 6px 12px #b0b8c3, -6px -6px 12px #ffffff;
+    color: #4a4a4a;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+button:hover {
+    background-color: #d4dae3;
+    color: #333;
+    box-shadow: 3px 3px 8px #a3b1c6, -3px -3px 8px #ffffff;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #e0e5ec;
+    box-shadow: inset 3px 3px 8px #c0c4c9, inset -3px -3px 8px #ffffff;
+}
+
+/* Task List */
 ul {
     list-style-type: none;
     padding: 0;
 }
 
 li {
-    margin-bottom: 10px;
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
+    background-color: #e0e5ec;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 9px 9px 16px #a3b1c6, -9px -9px 16px #ffffff;
+    transition: transform 0.3s;
 }
 
-button {
-    margin-left: 10px;
+li:hover {
+    transform: scale(1.02);
 }
 
+/* Checkbox */
+input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #4a4a4a;
+}
+
+/* Links */
 a {
     text-decoration: none;
-    color: blue;
-    display: block;
-    margin-bottom: 20px;
+    color: #0073e6;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
+a:hover {
+    color: #005bb5;
+}
+
+/* Flash Message */
 p {
     text-align: center;
-    color: red;
+    color: #ff4a4a;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+h1, form, ul, li, p {
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
 }
